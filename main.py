@@ -21,12 +21,16 @@ logging.basicConfig(
 # Load environment variables
 load_dotenv()
 
-# Initialize Truthbrush API with error handling
+# Custom API Class with enhanced error handling
 class EnhancedApi(Api):
     async def safe_pull_statuses(self, username, retries=3):
         for attempt in range(retries):
             try:
-                posts = list(super().pull_statuses(username))
+                posts = list(super().pull_statuses(
+                    username,
+                    with_media=True,
+                    extended=True
+                ))
                 return posts
             except Exception as e:
                 logging.error(f"API Error (attempt {attempt+1}): {str(e)}")
@@ -34,12 +38,13 @@ class EnhancedApi(Api):
                     await asyncio.sleep(2 ** attempt)
         return None
 
+# Initialize API
 api = EnhancedApi(
     username=os.getenv("TRUTHSOCIAL_USERNAME"),
     password=os.getenv("TRUTHSOCIAL_PASSWORD"),
 )
 
-# Setup Discord bot
+# Discord bot setup
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(
@@ -52,7 +57,7 @@ bot = commands.Bot(
 NOTIFICATION_CHANNEL_ID = int(os.getenv("DISCORD_CHANNEL_ID", 0))
 COOLDOWN_TIME = 30  # Seconds between commands per user
 
-### 🔄 Enhanced Database Setup ###
+### 🗄 Database Setup ###
 async def init_db():
     async with aiosqlite.connect("tracked_users.db") as db:
         await db.execute("""
@@ -64,14 +69,9 @@ async def init_db():
                 track_since TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 notification_count INTEGER DEFAULT 0
             )""")
-        await db.execute("""
-            CREATE TABLE IF NOT EXISTS bot_config (
-                key TEXT PRIMARY KEY,
-                value TEXT
-            )""")
         await db.commit()
 
-### ✅ Improved Bot Events ###
+### 🚀 Bot Events ###
 @bot.event
 async def on_ready():
     logging.info(f"Logged in as {bot.user} (ID: {bot.user.id})")
@@ -83,20 +83,18 @@ async def on_ready():
     if not check_for_new_posts.is_running():
         check_for_new_posts.start()
 
-### 🛠 Enhanced Commands ###
+### 💬 Commands ###
 @bot.command(name="track")
 @commands.cooldown(1, COOLDOWN_TIME, commands.BucketType.user)
 async def add_user(ctx, username: str):
     """Track a Truth Social user"""
     try:
-        # Sanitize username
         username = username.strip().lower()
         if not username.isalnum():
             await ctx.send("⚠️ Invalid username format")
             return
 
         async with aiosqlite.connect("tracked_users.db") as db:
-            # Check existing tracking
             cursor = await db.execute(
                 "SELECT username FROM tracked_users WHERE username = ?",
                 (username,)
@@ -105,53 +103,79 @@ async def add_user(ctx, username: str):
                 await ctx.send(f"ℹ️ Already tracking @{username}")
                 return
 
-            # Verify user exists
             posts = await api.safe_pull_statuses(username)
             if not posts:
                 await ctx.send(f"⚠️ User @{username} not found or has no posts")
                 return
 
-            # Insert new user
             await db.execute(
                 "INSERT INTO tracked_users (username, last_post_id) VALUES (?, ?)",
                 (username, posts[0]['id'])
-            )
             await db.commit()
             
             embed = discord.Embed(
-                title="✅ Tracking Started",
-                description=f"Now tracking @{username}",
-                color=0x00ff00
+                title="🔔 Tracking Started",
+                description=f"Now monitoring [@{username}](https://truthsocial.com/@{username})",
+                color=0x1DA1F2
             )
-            embed.add_field(name="First Post ID", value=posts[0]['id'])
-            embed.set_footer(text=f"Requested by {ctx.author.display_name}")
+            embed.add_field(
+                name="Features",
+                value="• Post notifications\n• Media previews\n• Engagement metrics",
+                inline=False
+            )
+            embed.set_footer(text=f"Notification channel: #{ctx.channel.name}")
             await ctx.send(embed=embed)
 
     except Exception as e:
         logging.error(f"Track Error: {str(e)}")
         await ctx.send("⚠️ Error processing request")
 
-@bot.command(name="stats")
-async def bot_stats(ctx):
-    """Show bot statistics"""
+@bot.command(name="untrack")
+async def remove_user(ctx, username: str):
+    """Stop tracking a user"""
     async with aiosqlite.connect("tracked_users.db") as db:
-        cursor = await db.execute("SELECT COUNT(*) FROM tracked_users")
-        total_users = (await cursor.fetchone())[0]
-        
-        cursor = await db.execute("SELECT SUM(notification_count) FROM tracked_users")
-        total_notifications = (await cursor.fetchone())[0] or 0
+        cursor = await db.execute(
+            "DELETE FROM tracked_users WHERE username=?", (username,)
+        )
+        if cursor.rowcount > 0:
+            await db.commit()
+            embed = discord.Embed(
+                description=f"🚫 Stopped tracking [@{username}](https://truthsocial.com/@{username})",
+                color=0xFF0000
+            )
+            await ctx.send(embed=embed)
+        else:
+            await ctx.send(f"⚠️ @{username} was not being tracked.")
+
+@bot.command(name="list")
+async def list_users(ctx):
+    """List tracked users"""
+    async with aiosqlite.connect("tracked_users.db") as db:
+        async with db.execute(
+            "SELECT username, track_since FROM tracked_users ORDER BY track_since DESC"
+        ) as cursor:
+            users = await cursor.fetchall()
+
+    if not users:
+        await ctx.send("📭 No tracked users")
+        return
 
     embed = discord.Embed(
-        title="Bot Statistics",
-        color=0x7289da,
-        timestamp=datetime.utcnow()
+        title="Tracked Accounts",
+        color=0x1DA1F2,
+        description=f"Total tracked: {len(users)}"
     )
-    embed.add_field(name="Tracked Users", value=total_users)
-    embed.add_field(name="Total Notifications", value=total_notifications)
-    embed.add_field(name="Uptime", value=str(bot.latency * 1000)[:5] + "ms")
+    
+    for username, track_since in users:
+        embed.add_field(
+            name=f"@{username}",
+            value=f"Tracking since: {track_since.split()[0]}",
+            inline=False
+        )
+        
     await ctx.send(embed=embed)
 
-### 🔄 Enhanced Background Task ###
+### 🔄 Background Checker ###
 @tasks.loop(minutes=5)
 async def check_for_new_posts():
     """Check for new posts from tracked users"""
@@ -170,13 +194,12 @@ async def check_for_new_posts():
         for username, last_post_id in tracked_users:
             try:
                 posts = await api.safe_pull_statuses(username)
-                if not posts:
+                if not posts or posts[0]['id'] == last_post_id:
                     continue
 
                 latest_post = posts[0]
-                if latest_post['id'] != last_post_id:
-                    await send_post_notification(channel, username, latest_post)
-                    await update_tracking_record(username, latest_post)
+                await send_post_notification(channel, username, latest_post)
+                await update_tracking_record(username, latest_post)
 
             except Exception as e:
                 logging.error(f"Post Check Error ({username}): {str(e)}")
@@ -185,34 +208,64 @@ async def check_for_new_posts():
         logging.error(f"Background Task Error: {str(e)}")
 
 async def send_post_notification(channel, username, post):
-    """Send enriched post notification"""
+    """Create Twitter-style embed with media"""
     embed = discord.Embed(
-        title=f"New Post from @{username}",
-        description=post["content"][:2000],  # Discord limit
-        color=0x00ff00,
-        url=f"https://truthsocial.com/@{username}/posts/{post['id']}",
+        color=0x1DA1F2,
+        description=f"[View Post](https://truthsocial.com/@{username}/posts/{post['id']})",
         timestamp=datetime.strptime(post["created_at"], "%Y-%m-%dT%H:%M:%S.%fZ")
     )
     
-    # Add media if available
+    # Author Header
+    embed.set_author(
+        name=f"{post['account']['display_name']} (@{username})",
+        icon_url=post["account"].get("avatar", ""),
+        url=f"https://truthsocial.com/@{username}"
+    )
+
+    # Content with Truncation
+    content = post["content"]
+    if len(content) > 250:
+        content = f"{content[:250]}... [View More](https://truthsocial.com/@{username}/posts/{post['id']})"
+    embed.add_field(name="\u200b", value=content, inline=False)
+
+    # Media Handling
     if post.get("media_attachments"):
-        embed.set_image(url=post["media_attachments"][0]["url"])
-    
-    # Add engagement metrics
+        media = post["media_attachments"][0]
+        if media["type"] == "image":
+            embed.set_image(url=media["url"])
+            
+            # Additional Media Counter
+            if len(post["media_attachments"]) > 1:
+                embed.add_field(
+                    name="Media",
+                    value=f"Contains {len(post['media_attachments'])} images",
+                    inline=False
+                )
+
+    # Engagement Metrics
     engagement = [
-        f"♥️ {post.get('favourites_count', 0)}",
-        f"🔄 {post.get('reblogs_count', 0)}",
+        f"♻️ {post.get('reblogs_count', 0)}",
+        f"❤️ {post.get('favourites_count', 0)}",
         f"💬 {post.get('replies_count', 0)}"
     ]
-    embed.add_field(name="Engagement", value="\n".join(engagement))
-    
-    # Add author info
-    embed.set_author(
-        name=f"@{username}",
-        icon_url=post["account"].get("avatar", "")
+    embed.set_footer(text=" • ".join(engagement))
+
+    # Twitter-style Footer
+    embed.add_field(
+        name="\u200b",
+        value=f"🐦 Tweet Tracker | 📅 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+        inline=False
     )
-    
+
     await channel.send(embed=embed)
+    
+    # Send additional images as separate messages
+    if post.get("media_attachments") and len(post["media_attachments"]) > 1:
+        for media in post["media_attachments"][1:]:
+            if media["type"] == "image":
+                await channel.send(
+                    f"Additional image from @{username}: {media['url']}"
+                )
 
 async def update_tracking_record(username, post):
     """Update database with new post info"""
@@ -227,47 +280,17 @@ async def update_tracking_record(username, post):
         )
         await db.commit()
 
-### 🆕 New Features ###
-@bot.command(name="search")
-async def search_posts(ctx, username: str, *, query: str):
-    """Search posts from a user"""
-    try:
-        posts = await api.safe_pull_statuses(username)
-        if not posts:
-            await ctx.send(f"No posts found for @{username}")
-            return
-
-        matches = [p for p in posts if query.lower() in p['content'].lower()]
-        
-        embed = discord.Embed(
-            title=f"Search Results for '{query}'",
-            description=f"Found {len(matches)} posts from @{username}",
-            color=0x7289da
-        )
-        
-        for post in matches[:3]:
-            embed.add_field(
-                name=f"Post {post['id']}",
-                value=f"{post['content'][:200]}...",
-                inline=False
-            )
-            
-        await ctx.send(embed=embed)
-        
-    except Exception as e:
-        await ctx.send(f"Error searching posts: {str(e)}")
-
-### 🛡 Error Handling ###
+### 🛑 Error Handling ###
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandOnCooldown):
-        await ctx.send(f"⚠️ Command on cooldown. Try again in {error.retry_after:.1f}s")
+        await ctx.send(f"⏳ Command on cooldown. Try again in {error.retry_after:.1f}s")
     elif isinstance(error, commands.MissingRequiredArgument):
         await ctx.send("⚠️ Missing required argument")
     else:
         logging.error(f"Command Error: {str(error)}")
 
-### 🚀 Run Setup ###
+### 🏁 Entry Point ###
 if __name__ == "__main__":
     TOKEN = os.getenv("DISCORD_BOT_TOKEN")
     if not TOKEN:
@@ -275,7 +298,7 @@ if __name__ == "__main__":
         exit(1)
 
     try:
-        logging.info("Starting bot...")
+        logging.info("Starting Truth Social Tracker...")
         bot.run(TOKEN)
     except Exception as e:
         logging.critical(f"Failed to start bot: {str(e)}")
