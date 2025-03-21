@@ -5821,3 +5821,891 @@
 2025-03-20 19:28:01,373 | INFO | API returned 10 items
 2025-03-20 19:28:01,375 | INFO | First item ID: mock_1742513280825
 2025-03-20 19:28:01,700 | INFO | Started tracking @donaldjtrumpjr
+2025-03-20 19:35:34,538 | INFO | Initializing Apify client with token starting with apify_api_...
+2025-03-20 19:35:34,543 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.122:8080
+2025-03-20 19:35:34,543 | INFO | [33mPress CTRL+C to quit[0m
+2025-03-20 19:35:34,584 | WARNING | PyNaCl is not installed, voice will NOT be supported
+2025-03-20 19:35:34,584 | INFO | Starting Enhanced Truth Social Tracker...
+2025-03-20 19:35:34,584 | INFO | logging in using static token
+2025-03-20 19:35:35,294 | INFO | Shard ID None has connected to Gateway (Session ID: f8694f48a7fec189bce498500b635245).
+2025-03-20 19:35:37,298 | INFO | Logged in as social tracker#5435 (ID: 1352369883345846302)
+2025-03-20 19:35:37,805 | INFO | Apify token validated successfully for user: Hash0utlaw
+2025-03-20 19:35:37,806 | INFO | Apify token validated successfully.
+2025-03-20 19:35:37,809 | INFO | Checking for new posts from @realdonaldtrump
+2025-03-20 19:35:37,810 | ERROR | Post Check Error (realdonaldtrump): 'TruthSocialScraper' object has no attribute 'get_user_data'
+2025-03-20 19:35:37,810 | INFO | Checking for new posts from @donaldjtrumpjr
+2025-03-20 19:35:37,810 | ERROR | Post Check Error (donaldjtrumpjr): 'TruthSocialScraper' object has no attribute 'get_user_data'
+2025-03-20 19:40:37,830 | INFO | Checking for new posts from @realdonaldtrump
+2025-03-20 19:40:37,832 | ERROR | Post Check Error (realdonaldtrump): 'TruthSocialScraper' object has no attribute 'get_user_data'
+2025-03-20 19:40:37,832 | INFO | Checking for new posts from @donaldjtrumpjr
+2025-03-20 19:40:37,832 | ERROR | Post Check Error (donaldjtrumpjr): 'TruthSocialScraper' object has no attribute 'get_user_data'
+2025-03-20 19:41:39,999 | INFO | Initializing Apify client with token starting with apify_api_...
+2025-03-20 19:41:40,003 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.122:8080
+2025-03-20 19:41:40,003 | INFO | [33mPress CTRL+C to quit[0m
+2025-03-20 19:41:40,045 | WARNING | PyNaCl is not installed, voice will NOT be supported
+2025-03-20 19:41:40,045 | INFO | Starting Enhanced Truth Social Tracker...
+2025-03-20 19:41:40,046 | INFO | logging in using static token
+2025-03-20 19:41:41,362 | INFO | Shard ID None has connected to Gateway (Session ID: 127b1b958e9df721c9bf41fc763cda87).
+2025-03-20 19:41:43,366 | INFO | Logged in as social tracker#5435 (ID: 1352369883345846302)
+2025-03-20 19:41:43,763 | INFO | Apify token validated successfully for user: Hash0utlaw
+2025-03-20 19:41:43,764 | INFO | Apify token validated successfully.
+2025-03-20 19:41:43,766 | INFO | Checking for new posts from @realdonaldtrump
+2025-03-20 19:41:43,766 | ERROR | Post Check Error (realdonaldtrump): 'TruthSocialScraper' object has no attribute 'get_user_data'
+2025-03-20 19:41:43,766 | INFO | Checking for new posts from @donaldjtrumpjr
+2025-03-20 19:41:43,766 | ERROR | Post Check Error (donaldjtrumpjr): 'TruthSocialScraper' object has no attribute 'get_user_data'
+2025-03-20 19:46:43,786 | INFO | Checking for new posts from @realdonaldtrump
+2025-03-20 19:46:43,788 | ERROR | Post Check Error (realdonaldtrump): 'TruthSocialScraper' object has no attribute 'get_user_data'
+2025-03-20 19:46:43,788 | INFO | Checking for new posts from @donaldjtrumpjr
+2025-03-20 19:46:43,788 | ERROR | Post Check Error (donaldjtrumpjr): 'TruthSocialScraper' object has no attribute 'get_user_data'
+2025-03-20 19:48:14,661 | INFO | Initializing Apify client with token starting with apify_api_...
+2025-03-20 19:48:14,665 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.122:8080
+2025-03-20 19:48:14,665 | INFO | [33mPress CTRL+C to quit[0m
+2025-03-20 19:48:14,705 | WARNING | PyNaCl is not installed, voice will NOT be supported
+2025-03-20 19:48:14,705 | INFO | Starting Enhanced Truth Social Tracker...
+2025-03-20 19:48:14,705 | INFO | logging in using static token
+2025-03-20 19:48:15,397 | INFO | Shard ID None has connected to Gateway (Session ID: 282cee2f02216f645180301131cc1b70).
+2025-03-20 19:48:17,403 | INFO | Logged in as social tracker#5435 (ID: 1352369883345846302)
+2025-03-20 19:48:17,754 | INFO | Apify token validated successfully for user: Hash0utlaw
+2025-03-20 19:48:17,754 | INFO | Apify token validated successfully.
+2025-03-20 19:48:17,755 | INFO | Checking for new posts from @realdonaldtrump
+2025-03-20 19:48:21,406 | INFO | API returned 10 items
+2025-03-20 19:48:21,406 | INFO | First item ID: mock_1742514500770
+2025-03-20 19:48:21,407 | INFO | Found 10 posts for @realdonaldtrump
+2025-03-20 19:48:21,407 | INFO | First post ID: mock_1742514500770, created at: 2025-03-20T23:48:20.000Z
+2025-03-20 19:48:21,407 | INFO | Post content preview: No new content available since your last check. This is a test post....
+2025-03-20 19:48:21,408 | INFO | No new posts after filtering
+2025-03-20 19:48:21,408 | INFO | No new posts for @realdonaldtrump
+2025-03-20 19:48:21,408 | INFO | Checking for new posts from @donaldjtrumpjr
+2025-03-20 19:48:24,187 | INFO | API returned 10 items
+2025-03-20 19:48:24,187 | INFO | First item ID: mock_1742514503804
+2025-03-20 19:48:24,187 | INFO | Found 10 posts for @donaldjtrumpjr
+2025-03-20 19:48:24,187 | INFO | First post ID: mock_1742514503804, created at: 2025-03-20T23:48:23.000Z
+2025-03-20 19:48:24,187 | INFO | Post content preview: No new content available since your last check. This is a test post....
+2025-03-20 19:48:24,188 | INFO | No new posts after filtering
+2025-03-20 19:48:24,188 | INFO | No new posts for @donaldjtrumpjr
+2025-03-20 19:53:17,790 | INFO | Checking for new posts from @realdonaldtrump
+2025-03-20 19:53:20,895 | INFO | API returned 10 items
+2025-03-20 19:53:20,895 | INFO | First item ID: mock_1742514800412
+2025-03-20 19:53:20,895 | INFO | Found 10 posts for @realdonaldtrump
+2025-03-20 19:53:20,895 | INFO | First post ID: mock_1742514800412, created at: 2025-03-20T23:53:20.000Z
+2025-03-20 19:53:20,896 | INFO | Post content preview: No new content available since your last check. This is a test post....
+2025-03-20 19:53:20,896 | INFO | No new posts after filtering
+2025-03-20 19:53:20,896 | INFO | No new posts for @realdonaldtrump
+2025-03-20 19:53:20,896 | INFO | Checking for new posts from @donaldjtrumpjr
+2025-03-20 19:53:23,353 | INFO | API returned 10 items
+2025-03-20 19:53:23,353 | INFO | First item ID: mock_1742514802854
+2025-03-20 19:53:23,354 | INFO | Found 10 posts for @donaldjtrumpjr
+2025-03-20 19:53:23,354 | INFO | First post ID: mock_1742514802854, created at: 2025-03-20T23:53:22.000Z
+2025-03-20 19:53:23,354 | INFO | Post content preview: No new content available since your last check. This is a test post....
+2025-03-20 19:53:23,354 | INFO | No new posts after filtering
+2025-03-20 19:53:23,354 | INFO | No new posts for @donaldjtrumpjr
+2025-03-20 19:58:04,886 | INFO | Initializing Apify client with token starting with apify_api_...
+2025-03-20 19:58:04,894 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.122:8080
+2025-03-20 19:58:04,894 | INFO | [33mPress CTRL+C to quit[0m
+2025-03-20 19:58:04,929 | WARNING | PyNaCl is not installed, voice will NOT be supported
+2025-03-20 19:58:04,930 | INFO | Starting Enhanced Truth Social Tracker...
+2025-03-20 19:58:04,930 | INFO | logging in using static token
+2025-03-20 19:58:05,687 | INFO | Shard ID None has connected to Gateway (Session ID: c59e06ea4f0352a7533265ea14c1aead).
+2025-03-20 19:58:07,691 | INFO | Logged in as social tracker#5435 (ID: 1352369883345846302)
+2025-03-20 19:58:08,368 | INFO | Apify token validated successfully for user: Hash0utlaw
+2025-03-20 19:58:08,368 | INFO | Apify token validated successfully.
+2025-03-20 19:58:11,345 | ERROR | API Error: 201 - [{
+  "id": "mock_1742515090809",
+  "created_at": "2025-03-20T23:58:10.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@realdonaldtrump/mock_0",
+  "url": "https://truthsocial.com/@realdonaldtrump/mock_0",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_realdonaldtrump",
+    "username": "realdonaldtrump",
+    "acct": "realdonaldtrump",
+    "display_name": "realdonaldtrump",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@realdonaldtrump",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515090810",
+  "created_at": "2025-03-20T22:58:10.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@realdonaldtrump/mock_1",
+  "url": "https://truthsocial.com/@realdonaldtrump/mock_1",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_realdonaldtrump",
+    "username": "realdonaldtrump",
+    "acct": "realdonaldtrump",
+    "display_name": "realdonaldtrump",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@realdonaldtrump",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515090811",
+  "created_at": "2025-03-20T21:58:10.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@realdonaldtrump/mock_2",
+  "url": "https://truthsocial.com/@realdonaldtrump/mock_2",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_realdonaldtrump",
+    "username": "realdonaldtrump",
+    "acct": "realdonaldtrump",
+    "display_name": "realdonaldtrump",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@realdonaldtrump",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515090812",
+  "created_at": "2025-03-20T20:58:10.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@realdonaldtrump/mock_3",
+  "url": "https://truthsocial.com/@realdonaldtrump/mock_3",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_realdonaldtrump",
+    "username": "realdonaldtrump",
+    "acct": "realdonaldtrump",
+    "display_name": "realdonaldtrump",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@realdonaldtrump",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515090813",
+  "created_at": "2025-03-20T19:58:10.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@realdonaldtrump/mock_4",
+  "url": "https://truthsocial.com/@realdonaldtrump/mock_4",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_realdonaldtrump",
+    "username": "realdonaldtrump",
+    "acct": "realdonaldtrump",
+    "display_name": "realdonaldtrump",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@realdonaldtrump",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515090814",
+  "created_at": "2025-03-20T18:58:10.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@realdonaldtrump/mock_5",
+  "url": "https://truthsocial.com/@realdonaldtrump/mock_5",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_realdonaldtrump",
+    "username": "realdonaldtrump",
+    "acct": "realdonaldtrump",
+    "display_name": "realdonaldtrump",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@realdonaldtrump",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515090815",
+  "created_at": "2025-03-20T17:58:10.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@realdonaldtrump/mock_6",
+  "url": "https://truthsocial.com/@realdonaldtrump/mock_6",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_realdonaldtrump",
+    "username": "realdonaldtrump",
+    "acct": "realdonaldtrump",
+    "display_name": "realdonaldtrump",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@realdonaldtrump",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515090816",
+  "created_at": "2025-03-20T16:58:10.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@realdonaldtrump/mock_7",
+  "url": "https://truthsocial.com/@realdonaldtrump/mock_7",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_realdonaldtrump",
+    "username": "realdonaldtrump",
+    "acct": "realdonaldtrump",
+    "display_name": "realdonaldtrump",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@realdonaldtrump",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515090817",
+  "created_at": "2025-03-20T15:58:10.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@realdonaldtrump/mock_8",
+  "url": "https://truthsocial.com/@realdonaldtrump/mock_8",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_realdonaldtrump",
+    "username": "realdonaldtrump",
+    "acct": "realdonaldtrump",
+    "display_name": "realdonaldtrump",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@realdonaldtrump",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515090818",
+  "created_at": "2025-03-20T14:58:10.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@realdonaldtrump/mock_9",
+  "url": "https://truthsocial.com/@realdonaldtrump/mock_9",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_realdonaldtrump",
+    "username": "realdonaldtrump",
+    "acct": "realdonaldtrump",
+    "display_name": "realdonaldtrump",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@realdonaldtrump",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+}]
+2025-03-20 19:58:11,346 | INFO | Using fallback method to fetch user data
+2025-03-20 19:58:11,697 | INFO | HTTP Request: POST https://api.apify.com/v2/acts/muhammetakkurtt~truth-social-scraper/runs "HTTP/1.1 201 Created"
+2025-03-20 19:58:12,782 | INFO | HTTP Request: GET https://api.apify.com/v2/actor-runs/9mKQ3Jsf9JbKKMQUC?waitForFinish=999999 "HTTP/1.1 200 OK"
+2025-03-20 19:58:13,446 | INFO | Waiting for Apify run 9mKQ3Jsf9JbKKMQUC to finish...
+2025-03-20 19:58:24,453 | ERROR | API Error: 201 - [{
+  "id": "mock_1742515103848",
+  "created_at": "2025-03-20T23:58:23.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@donaldjtrumpjr/mock_0",
+  "url": "https://truthsocial.com/@donaldjtrumpjr/mock_0",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_donaldjtrumpjr",
+    "username": "donaldjtrumpjr",
+    "acct": "donaldjtrumpjr",
+    "display_name": "donaldjtrumpjr",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@donaldjtrumpjr",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515103849",
+  "created_at": "2025-03-20T22:58:23.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@donaldjtrumpjr/mock_1",
+  "url": "https://truthsocial.com/@donaldjtrumpjr/mock_1",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_donaldjtrumpjr",
+    "username": "donaldjtrumpjr",
+    "acct": "donaldjtrumpjr",
+    "display_name": "donaldjtrumpjr",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@donaldjtrumpjr",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515103850",
+  "created_at": "2025-03-20T21:58:23.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@donaldjtrumpjr/mock_2",
+  "url": "https://truthsocial.com/@donaldjtrumpjr/mock_2",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_donaldjtrumpjr",
+    "username": "donaldjtrumpjr",
+    "acct": "donaldjtrumpjr",
+    "display_name": "donaldjtrumpjr",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@donaldjtrumpjr",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515103851",
+  "created_at": "2025-03-20T20:58:23.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@donaldjtrumpjr/mock_3",
+  "url": "https://truthsocial.com/@donaldjtrumpjr/mock_3",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_donaldjtrumpjr",
+    "username": "donaldjtrumpjr",
+    "acct": "donaldjtrumpjr",
+    "display_name": "donaldjtrumpjr",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@donaldjtrumpjr",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515103852",
+  "created_at": "2025-03-20T19:58:23.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@donaldjtrumpjr/mock_4",
+  "url": "https://truthsocial.com/@donaldjtrumpjr/mock_4",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_donaldjtrumpjr",
+    "username": "donaldjtrumpjr",
+    "acct": "donaldjtrumpjr",
+    "display_name": "donaldjtrumpjr",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@donaldjtrumpjr",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515103853",
+  "created_at": "2025-03-20T18:58:23.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@donaldjtrumpjr/mock_5",
+  "url": "https://truthsocial.com/@donaldjtrumpjr/mock_5",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_donaldjtrumpjr",
+    "username": "donaldjtrumpjr",
+    "acct": "donaldjtrumpjr",
+    "display_name": "donaldjtrumpjr",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@donaldjtrumpjr",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515103854",
+  "created_at": "2025-03-20T17:58:23.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@donaldjtrumpjr/mock_6",
+  "url": "https://truthsocial.com/@donaldjtrumpjr/mock_6",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_donaldjtrumpjr",
+    "username": "donaldjtrumpjr",
+    "acct": "donaldjtrumpjr",
+    "display_name": "donaldjtrumpjr",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@donaldjtrumpjr",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515103855",
+  "created_at": "2025-03-20T16:58:23.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@donaldjtrumpjr/mock_7",
+  "url": "https://truthsocial.com/@donaldjtrumpjr/mock_7",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_donaldjtrumpjr",
+    "username": "donaldjtrumpjr",
+    "acct": "donaldjtrumpjr",
+    "display_name": "donaldjtrumpjr",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@donaldjtrumpjr",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515103856",
+  "created_at": "2025-03-20T15:58:23.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@donaldjtrumpjr/mock_8",
+  "url": "https://truthsocial.com/@donaldjtrumpjr/mock_8",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_donaldjtrumpjr",
+    "username": "donaldjtrumpjr",
+    "acct": "donaldjtrumpjr",
+    "display_name": "donaldjtrumpjr",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@donaldjtrumpjr",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+},
+{
+  "id": "mock_1742515103857",
+  "created_at": "2025-03-20T14:58:23.000Z",
+  "content": "No new content available since your last check. This is a test post.",
+  "visibility": "public",
+  "sensitive": false,
+  "spoiler_text": "",
+  "language": "en",
+  "uri": "https://truthsocial.com/@donaldjtrumpjr/mock_9",
+  "url": "https://truthsocial.com/@donaldjtrumpjr/mock_9",
+  "replies_count": 0,
+  "reblogs_count": 0,
+  "favourites_count": 0,
+  "account": {
+    "id": "mock_account_donaldjtrumpjr",
+    "username": "donaldjtrumpjr",
+    "acct": "donaldjtrumpjr",
+    "display_name": "donaldjtrumpjr",
+    "locked": false,
+    "bot": false,
+    "created_at": "2022-01-01T00:00:00.000Z",
+    "note": "",
+    "url": "https://truthsocial.com/@donaldjtrumpjr",
+    "avatar": "",
+    "header": "",
+    "followers_count": 0,
+    "following_count": 0,
+    "statuses_count": 0,
+    "last_status_at": null,
+    "emojis": [],
+    "fields": []
+  },
+  "media_attachments": [],
+  "mentions": [],
+  "tags": [],
+  "emojis": [],
+  "card": null,
+  "poll": null
+}]
+2025-03-20 19:58:24,457 | INFO | Using fallback method to fetch user data
+2025-03-20 19:58:24,852 | INFO | HTTP Request: POST https://api.apify.com/v2/acts/muhammetakkurtt~truth-social-scraper/runs "HTTP/1.1 201 Created"
+2025-03-20 19:58:26,088 | INFO | HTTP Request: GET https://api.apify.com/v2/actor-runs/3M0Dq8mXXDSP6vadl?waitForFinish=999999 "HTTP/1.1 200 OK"
+2025-03-20 19:58:27,522 | INFO | Waiting for Apify run 3M0Dq8mXXDSP6vadl to finish...
